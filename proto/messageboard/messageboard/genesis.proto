@@ -1,0 +1,12 @@
+syntax = "proto3";
+package messageboard.messageboard;
+
+import "gogoproto/gogo.proto";
+import "messageboard/messageboard/params.proto";
+
+option go_package = "messageboard/x/messageboard/types";
+
+// GenesisState defines the messageboard module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
